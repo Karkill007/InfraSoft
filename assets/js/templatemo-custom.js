@@ -117,6 +117,35 @@
 
     });
 
+
+
+
+
+    document.getElementById("contact").addEventListener("submit", async (e) => {
+    e.preventDefault(); // Evita el envío tradicional
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch("https://formsubmit.co/ajax/charli9013@outlook.com", {
+            method: "POST",
+            body: formData,
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            alert("Mensaje enviado!")
+            window.location.href = "https://karkill007.github.io/InfraSoft/";
+        } else {
+            alert("Error al enviar. Por favor, inténtalo de nuevo.");
+        }
+    } catch (error) {
+        alert("Error de conexión. Revisa tu red.");
+    }
+});
+
 	
 
 	// Window Resize Mobile Menu Fix
