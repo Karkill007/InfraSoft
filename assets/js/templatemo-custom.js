@@ -122,13 +122,13 @@
 
 
     document.getElementById("contact").addEventListener("submit", async (e) => {
-    e.preventDefault(); // Evita el envío tradicional
+    e.preventDefault();
 
     const form = e.target;
     const formData = new FormData(form);
 
     try {
-        const response = await fetch("https://formsubmit.co/ajax/charli9013@outlook.com", {
+        const response = await fetch("https://formsubmit.co/ajax/lucio.hcruz@outlook.com", {
             method: "POST",
             body: formData,
         });
